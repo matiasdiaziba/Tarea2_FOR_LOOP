@@ -1,3 +1,8 @@
+## Tarea 2 de Big Data ICI, Estudiante Matias  Diaz Ibañez 
+#======================================================================
+#======================================================================
+
+
 #se inicia definiendo el directorio de trabajo 
 setwd("C:/Users/matie/Desktop/Big Data/Tarea2_FOR_LOOP")
 library("readr")
@@ -5,12 +10,14 @@ library("csv")
 library("rvest")
 library("data.table")
 library("dplyr")
+#aclaracion estuve haciendo intentos con todos estos paquetes que llego a un punto en el que no sabia cual estba utilizando, por eso los deje todos 
 rm(list =ls())
 
 
 
 #1) Cargue las bases de datos incoporando en cada una de ellas la variable "tamanio",
 #donde indique de que tamaño es la empresa de ese país.(1 pto)
+
 
 #empresas de chile 
 grandes_chile<-read.csv ("grandes_chile.csv", sep = ";", row.names = 1)
