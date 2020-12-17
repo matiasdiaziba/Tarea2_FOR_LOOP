@@ -10,7 +10,7 @@ rm(list =ls())
 
 
 #1) Cargue las bases de datos incoporando en cada una de ellas la variable "tamanio",
-#donde indique de que tamaño es la empresa de ese país.(1 pto)
+#donde indique de que tamaÃ±o es la empresa de ese paÃ­s.(1 pto)
 
 #empresas de chile 
 grandes_chile<-read.csv ("grandes_chile.csv", sep = ";", row.names = 1)
@@ -19,8 +19,8 @@ grandes_chile$tamanio = "grande"
 medianas_chile<-read.csv ("medianas_chile.csv", sep = ";", row.names = 1)
 medianas_chile$tamanio = "mediana"
 
-pequeñas_chile<-read.csv ("pequena_chile.csv", sep = ";", row.names = 1)
-pequeñas_chile$tamanio = "pequena"
+pequeÃ±as_chile<-read.csv ("pequena_chile.csv", sep = ";", row.names = 1)
+pequeÃ±as_chile$tamanio = "pequena"
 
 micro_chile<-read.csv ("micro_chile.csv", sep = ";", row.names = 1)
 micro_chile$tamanio = "micro"
@@ -33,8 +33,8 @@ grandes_colombia$tamanio = "grande"
 medianas_colombia<-read.csv ("medianas_colombia.csv", sep = ";", row.names = 1)
 medianas_colombia$tamanio = "mediana"
 
-pequeñas_colombia<-read.csv ("pequena_colombia.csv", sep = ";", row.names = 1)
-pequeñas_colombia$tamanio = "pequena"
+pequeÃ±as_colombia<-read.csv ("pequena_colombia.csv", sep = ";", row.names = 1)
+pequeÃ±as_colombia$tamanio = "pequena"
 
 micro_colombia<-read.csv ("micro_colombia.csv", sep = ";", row.names = 1)
 micro_colombia$tamanio = "micro"
@@ -48,18 +48,18 @@ grandes_peru$tamanio = "grande"
 medianas_peru<-read.csv ("medianas_peru.csv", sep = ";", row.names = 1)
 medianas_peru$tamanio = "mediana"
 
-pequeñas_peru<-read.csv ("pequena_peru.csv", sep = ";", row.names = 1)
-pequeñas_peru$tamanio = "pequena"
+pequeÃ±as_peru<-read.csv ("pequena_peru.csv", sep = ";", row.names = 1)
+pequeÃ±as_peru$tamanio = "pequena"
 
 micro_peru<-read.csv ("micro_peru.csv", sep = ";", row.names = 1)
 micro_peru$tamanio = "micro"
 
-#2) Reuna todas las bases en una sola y defina de qué tipología (tipo de datos) son cada
+#2) Reuna todas las bases en una sola y defina de quÃ© tipologÃ­a (tipo de datos) son cada
 #una de las variables que se encuentran en la data.(1 pto)
 
-todo_chile <-  bind_rows(grandes_chile,medianas_chile,pequeñas_chile,micro_chile)[1:12]
-todo_colombia <- bind_rows(grandes_colombia,medianas_colombia,pequeñas_colombia,micro_colombia)[1:12]
-todo_peru <- bind_rows(grandes_peru,medianas_peru,pequeñas_peru,micro_peru)[1:12]
+todo_chile <-  bind_rows(grandes_chile,medianas_chile,pequeÃ±as_chile,micro_chile)[1:12]
+todo_colombia <- bind_rows(grandes_colombia,medianas_colombia,pequeÃ±as_colombia,micro_colombia)[1:12]
+todo_peru <- bind_rows(grandes_peru,medianas_peru,pequeÃ±as_peru,micro_peru)[1:12]
 
 Todos_juntos <- bind_rows(todo_chile,todo_colombia,todo_peru)[1:12]
 
@@ -80,7 +80,7 @@ Todos_juntos <- bind_rows(todo_chile,todo_colombia,todo_peru)[1:12]
 #tamanio = string 
 
 
-#Determine a través del uso de condicionales y/o for cuántas obervaciones tiene Peru
+#Determine a travÃ©s del uso de condicionales y/o for cuÃ¡ntas obervaciones tiene Peru
 #versus Chile.(2 pto)
 
 
@@ -106,7 +106,8 @@ compara_ch_pe <- function(Todos_juntos){
 }
 compara_ch_pe(Todos_juntos)
 
-
+#Determine a travÃ©s del uso de condicionales y/o for Â¿cuÃ¡l es el paÃ­s con mayor
+#ingresos de explotaciÃ³n para los aÃ±os que considera la muestra.(2 pto)
 Todos_juntos <- as.numeric(Todos_juntos)
 
 ingre_chl <- print(sum(todo_chile[]/nrow(todo_chile[2])))
